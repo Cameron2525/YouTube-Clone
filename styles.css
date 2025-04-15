@@ -124,7 +124,7 @@
       gap: 0.75em;
       padding: 0.5em 1.5em;
       cursor: pointer;
-      color: #5c5b5b;
+      color: #5d5959;
       transition: background-color 0.2s;
       font-size: clamp(0.85rem, 2vw, 1rem);
     }
@@ -152,7 +152,7 @@
     .link-section h4 {
       margin: 0.625em 0;
       font-size: clamp(0.75rem, 2vw, 0.9rem);
-      color: #000000;
+      color: #6c6969;
       padding-left: 0.3em;
     }
     
@@ -175,6 +175,14 @@
       background-color: #f0f0f0;
     }
     
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 190px;
+        align-items: center;
+      }
+    
+     
+    }
     
     
 .thumbnail-row {
