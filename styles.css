@@ -1,0 +1,366 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+   body {
+      font-family: Roboto, Arial;
+      margin: 0;
+      padding-top: 80px;
+      padding-left: 96px;
+      padding-right: 24px;
+      background-color: rgb(248, 248, 248);
+    }
+
+    @media (min-width: 1200.1px) {
+      body {
+        margin-left: 155px;
+      }
+    }
+    
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 16px;
+      background-color: white;
+    }
+    
+    .nav-left,
+    .nav-center,
+    .nav-right {
+      display: flex;
+      align-items: center;
+      padding-left: 35%;
+    }
+    
+    .menu-icon {
+      font-size: 20px;
+      border: none;
+      align-items: center;
+      margin-left: -170%;
+    }
+    
+    .logo {
+      height: 24px;
+      margin-left: 18%;
+    }
+   
+    
+    .search-container {
+      display: flex;
+      border: 1px solid #ccc;
+      border-radius: 40px;
+      overflow: hidden;
+      margin-right: 18px;
+    }
+    
+    .search-container input {
+      padding: 8px 12px;
+      border: none;
+      outline: none;
+      width: 300px;
+    }
+    
+    .search-btn {
+      background-color: #f8f8f8;
+      border: none;
+      padding: 0 22px;
+    }
+    
+    .mic-btn,
+    .create-btn,
+    .bell-btn {
+      background: #f0f0f0;
+      border: none;
+      padding: 8px;
+      border-radius: 50%;
+    }
+    
+    .avatar {
+      height: 32px;
+      width: 32px;
+      border-radius: 50%;
+      margin-left: 28px;
+    }
+    
+
+    .header {
+      height: 55px;
+      display: flex;
+      justify-content: space-between;
+      position: fixed;
+      padding: 0 16px;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: white;
+      border-bottom: 1px solid #ddd;
+      z-index: 100;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 55px;
+      left: 0;
+      bottom: 0;
+      background-color: white;
+      z-index: 200;
+      width: 72px;
+      overflow-y: auto;
+    }
+
+    @media (min-width: 600.2px) {
+      .sidebar {
+        width: 240px;
+        padding-top: 13px;
+        padding-left: 20px;
+      }
+    }
+    .sidebar-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75em;
+      padding: 0.5em 1.5em;
+      cursor: pointer;
+      color: #5c5b5b;
+      transition: background-color 0.2s;
+      font-size: clamp(0.85rem, 2vw, 1rem);
+    }
+    
+    .sidebar-link:hover {
+      background-color: #f0f0f0;
+    }
+    
+    .sidebar-link i {
+      font-size: clamp(1rem, 2.5vw, 1.125rem);
+      width: 1.25em;
+      text-align: center;
+    }
+    
+    .links-container {
+      display: flex;
+      flex-direction: column;
+      padding: 0 1em;
+    }
+    
+    .link-section {
+      margin-bottom: 1.5em;
+    }
+    
+    .link-section h4 {
+      margin: 0.625em 0;
+      font-size: clamp(0.75rem, 2vw, 0.9rem);
+      color: #000000;
+      padding-left: 0.3em;
+    }
+    
+    .links-container a {
+      display: flex;
+      align-items: center;
+      gap: 0.625em;
+      padding: 0.5em 0;
+      color: #4e4e4e;
+      text-decoration: none;
+      font-size: clamp(0.8rem, 2vw, 1rem);
+    }
+    
+    .links-container a i {
+      width: 1.25em;
+      text-align: center;
+    }
+    
+    .link-section a:hover {
+      background-color: #f0f0f0;
+    }
+    
+    
+    
+.thumbnail-row {
+  margin-bottom: 8px;
+  position: relative;
+}
+.video-info-grid {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+
+.profile-picture {
+  width: 36px;
+  border-radius: 50px;
+}
+
+.video-title-link,
+.channel-link {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.video-title {
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.video-author,
+.video-stats {
+  font-size: 12px;
+  color: rgb(96, 96, 96);
+}
+
+.video-author {
+  margin-bottom: 4px;
+}
+
+.thumbnail:hover,
+.profile-picture:hover,
+.video-title:hover,
+.video-author:hover {
+  cursor: pointer;
+}
+
+.profile-picture-container {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-picture-container:hover .channel-tooltip {
+  opacity: 1;
+}
+
+.channel-tooltip {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: white;
+  width: 200px;
+  padding: 12px 12px;
+  box-shadow: 2px 3px 10px rgba(16, 14, 14, 0.3);
+  border-radius: 6px;
+  position: absolute;
+  top: 50px;
+  z-index: 300;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;   
+}
+
+.channel-tooltip-picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  margin-right: 8px;
+}
+
+.channel-tooltip-name {
+  font-family: Roboto, Arial;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.channel-tooltip-stats {
+  font-family: Roboto, Arial;
+  color: rgb(96, 96, 96);
+  font-size: 14px;
+}
+.services {
+  background: #ffffff;
+  color: #322c2c;
+  padding-left: 0px 0px;
+}
+
+.serv-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* === Card Container Grid === */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* === Card Styling === */
+
+
+/* === Thumbnail Section with Play Overlay === */
+.thumbnail {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.play-overlay {
+  position: absolute;
+  top: 35%;
+  left: 45%;
+  font-size: 48px;
+  color: #ffffff;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.thumbnail:hover .play-overlay {
+  opacity: 1;
+}
+
+/* === Card Text === */
+.text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+/* === Views and Time Text === */
+.views {
+  font-size: 12px;
+  color: #000000;
+}
+
+.views i {
+  margin-right: 5px;
+}
+@media (max-width: 600px) {
+  .sidebar-link, .links-container a {
+    gap: 0.5em;
+    padding: 0.5em 1em;
+  }
+
+  .sidebar-link i,
+  .links-container a i {
+    font-size: 1rem;
+    width: 1em;
+  }
+
+  .link-section h4 {
+    font-size: 0.75rem;
+  }
+}
